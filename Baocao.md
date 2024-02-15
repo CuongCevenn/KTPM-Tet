@@ -35,6 +35,7 @@ Linux là một họ các hệ điều hành tự do mã nguồn mở dựa trê
 Một số điểm quan trọng về BSD:
 - BSD license cho phép tự do sử dụng, tái phân phối và sửa đổi mã nguồn mà không yêu cầu công bố mã nguồn mới như **GPL (General Public License)**. Với BSD license, người dùng có quyền mua lại, chỉnh sửa và sử dụng mã nguồn một cách tự do mà không cần phải chia sẻ các sửa đổi của họ.
 - BSD có một cộng đồng phát triển mạnh mẽ và ổn định, cung cấp hỗ trợ và khả năng thích ứng cho các dự án sử dụng BSD. Cộng đồng BSD đã đóng góp vào việc phát triển và duy trì các yếu tố cơ bản của BSD, giúp nâng cao tính ổn định và của nền tảng phần mềm này.
+***Trả lời câu hỏi MacOS thuộc hệ điều hành nào, câu trả lời là Unix***
 ### Alpine
 Alpine Linux là một bản phân phối Linux hướng đến sự tối giản, cả về không gian và phạm vi, cũng như tính bảo mật cao hơn.
 Một số đặc điểm của Alpine:
