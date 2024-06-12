@@ -1,0 +1,128 @@
+Vấn đáp 15p 3b/1l
+
+Design pattern & ứng dụng
+
+Câu hỏi ví dụ 1:
+hệ thống viết = C++. Cần cập nhật lên hệ  thống viết = Java, cập nhật thông tin trên mobile app.
+Phương án thiết kế để migrate các hệ thống trên ntn?
+
+Lựa chọn design pattern.
+Cách triển khai
+
+
+- Anti-corruption layout. -> Để xử lý các hệ thống cũ. (Chính xác hơn)
+- Backend for frontend -> Mobile có backend là java sử dụng api truy cập đến C.
+
+
+Câu hỏi ví dụ 2:
+1 nhóm cần xây dựng hệ thống CI/CD cho dự án của họ. Cần chạy 2 sv độc lập cho 2 nv khác nhau. 1 ud Android, 1 giao diện web. Sau
+khi build xong những module này quá trình test tự động sẽ được thực thi trên từng module này để đảm bảo bản release sẽ 
+không có lỗi. Cần triển khai quy trình này như thế nào?
+
+- Hệ thống CI/CD
+
+- Pub/sub:
+... -> Queue -> 2 server
+
+Nếu triển khai 1 trang web để theo dõi quá trình này, sẽ sd công nghệ gì? -> Socket, 
+
+Câu hỏi ví dụ 3:
+Ud Zalo không có server để lưu trữ tin nhắn của người dùng lâu dài. A gửi cho B 1 tin nhắn gồm 1 file rất nặng, tuy nhiên, hiện điện thoại của 
+B bị hỏng không thể bật lên. Điều gì nên diễn ra trong tình huống này , để đảm bảo người dùng không bị lỡ mất tin nhắn quan trọng?
+
+- Retry Pattern: Cơ chế gửi lại đến khi B nhận được. (giới hạn/ có thể dùng máy A làm server lưu trữ hiện tại/ Máy A hỏng => đến server tạm thời) 
+
+Câu hỏi ví dụ 4:
+Một hệ thống tổng hợp tạp chí khoa học lấy ttin từ nhiều nguồn khác nhau, không cùng mẫu API nhất định. Trong mỗi bài báo, lại phải tiếp tục lấy 
+thông tin về các chủ đề, các tác giả của bài báo. Nên xây dựng hệ thống này như thế nào, có pattern nào có thể đc sử dụng không?
+
+- Gateway routing: Server nhận yc -> trỏ đến API thích hợp
+- Pipe & filter: Cần tiền xử lý dữ liệu vì định dạng dữ liệu khác nhau.
+- Gateway Aggregation Pattern?
+
+
+Câu hỏi ví dụ 5:
+Do tình trạng ô nhiễm không khí ở HN, nhiều người quan tâm đến các chỉ số chất lượng không khí. Một hệ thống có nv báo tính trạng ô nhiễm 
+về điện thoại. Khi có thay đổi về chất lượng kk, điện thoại của người dẫn sẽ đc thtoong báo.
+ NÊn sd cn & thiết kế hệ thống ra sao?
+
+- Pub/sub
+
+Câu hỏi vd 6:
+Hệ thống giao lưu VN -NB tăng mạnh người dùng => quá tải hệ thống. Giải pháp để mở rộng hệ thống?
+
+
+
+
+
+Câu hỏi 7:
+A làm 1 website giới thiệu bản thân để làm CV. B cảm thấy A nên dựng 1 web = docker. Theo bạn, A có nên dùng docker trong TH này ko
+
+Chỉ dùng docker cho các dự án khó deploy => không nên, không cần thiết
+Không sử dụng docker có các dự án có thể chạy ngay.
+
+Câu hỏi 8:
+công ty A gửi thông báo đến các nv qua app của cty.
+Câu hỏi: công nghệ cụ thể nào có thể triển khai đc chức năng này
+
+Pub/Sub
+File based
+
+Câu hỏi 9:
+Tạo dịch vụ chỉnh sửa video online = công nghệ nén video chuyên nghiệp
+Kiến trúc nào có thể sử dụng, triển khai ntn?
+
+PIpe & filter => kiểm duyệt nội dung -> nén video -> hoàn thiện (tốn tài nguyên để nén nếu nén trc)
+mục tiêu nén +> tiết kiệm dung lượng lưu trữ trên sv, truyền tt đến người dùng để xem thì sẽ tốn ít dung lượng hơn
+
+Câu hỏi 10:
+nên sử dụng dịch vụ nào để tránh tình trạng sập trang web DDOS?
+
+Proxy
+Captcha
+
+Câu hỏi 11:
+VNC và Teamviewer khác gì nhau?
+Về bản chất lẫn cách hoạt động
+
+
+VNC => ko có màn hình thì có thể tạo màn hình ảo sd, nếu có 2 màn hình thì sẽ tạo 2 màn hình ảo
+TEamviewer => bắt buộc phải có màn hình để sd, nếu có 2 màn hình thì có thể remote cả 2 màn hình
+
+3 dạng câu hỏi: Lựa chọn Pattern, Lựa chọn công nghệ, câu hỏi viết trên giấy trình bày về pattern nào đấy.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
